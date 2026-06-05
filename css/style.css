@@ -1507,3 +1507,41 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
   .float-social__btn { width: 44px; height: 44px; }
   .float-social__btn svg { width: 18px; height: 18px; }
 }
+
+/* ── Demo Badge ──────────────────────────────────────────── */
+.demo-badge {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.75rem 0.35rem 0.6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-2);
+  border-left: 3px solid var(--accent);
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  pointer-events: none;
+  user-select: none;
+}
+.demo-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  animation: demo-pulse 2s ease-in-out infinite;
+}
+.demo-badge__text {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--text-2);
+  text-transform: uppercase;
+}
+@keyframes demo-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
