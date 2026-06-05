@@ -279,8 +279,8 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
 .hero__eyebrow { margin-bottom: 1.25rem; }
 .hero__title {
   font-family: var(--font-disp);
-  font-size: clamp(2.8rem, 7vw, 7rem);
-  line-height: 1.05;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--text);
 }
@@ -609,7 +609,7 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
 .cta-band__title {
   font-family: var(--font-disp);
   font-size: clamp(1.8rem, 4.5vw, 4rem);
-  line-height: 1.1;
+  line-height: 1.35;
   color: var(--bg);
 }
 .cta-band__sub {
@@ -641,7 +641,7 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
 .page-hero__title {
   font-family: var(--font-disp);
   font-size: clamp(3rem, 9vw, 9rem);
-  line-height: 1.05;
+  line-height: 1.35;
   position: relative;
   z-index: 1;
 }
@@ -712,7 +712,7 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
 .about-text h2 {
   font-family: var(--font-disp);
   font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.1;
+  line-height: 1.35;
   margin-bottom: 1.5rem;
 }
 .about-text p {
@@ -1092,7 +1092,7 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
 .contact-info__heading {
   font-family: var(--font-disp);
   font-size: clamp(2rem, 4vw, 3.8rem);
-  line-height: 1.1;
+  line-height: 1.35;
   margin-bottom: 1.5rem;
 }
 .contact-info__desc {
@@ -1165,7 +1165,7 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
 .quote-form__head h3 {
   font-family: var(--font-disp);
   font-size: clamp(1.6rem, 3vw, 2.6rem);
-  line-height: 1.1;
+  line-height: 1.35;
   margin-top: 0.4rem;
 }
 .form-grid {
