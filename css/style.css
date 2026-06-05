@@ -501,6 +501,13 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
   background: var(--border);
 }
 
+/* Explicit placement — CSS classes so media queries can override */
+.port-main { grid-column: 1; grid-row: 1 / span 2; }
+.port-r1   { grid-column: 2; grid-row: 1; }
+.port-r2   { grid-column: 3; grid-row: 1; }
+.port-r3   { grid-column: 2; grid-row: 2; }
+.port-r4   { grid-column: 3; grid-row: 2; }
+
 .port-item {
   position: relative;
   overflow: hidden;
@@ -1396,9 +1403,20 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 1100px) {
-  .port-grid { grid-template-columns: 1fr 1fr; grid-template-rows: clamp(180px, 22vw, 320px) clamp(180px, 22vw, 320px) clamp(180px, 22vw, 320px); }
-  .port-grid .port-item:first-child { grid-column: 1 / span 2; grid-row: 1; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Tablet: 2-col port-grid, main item full-width top */
+@media (max-width: 900px) {
+  .port-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: clamp(200px, 35vw, 360px) clamp(180px, 28vw, 300px) clamp(180px, 28vw, 300px);
+  }
+  .port-main { grid-column: 1 / span 2; grid-row: 1; }
+  .port-r1   { grid-column: 1; grid-row: 2; }
+  .port-r2   { grid-column: 2; grid-row: 2; }
+  .port-r3   { grid-column: 1; grid-row: 3; }
+  .port-r4   { grid-column: 2; grid-row: 3; }
 }
 @media (max-width: 900px) {
   .about-split { grid-template-columns: 1fr; }
@@ -1440,6 +1458,18 @@ input, textarea, select { font-family: var(--font-body); font-size: 1rem; color:
   .hero__actions .btn { width: 100%; justify-content: center; }
   .cta-band__inner { flex-direction: column; }
   .sec-header--row { flex-direction: column; align-items: flex-start; }
+
+  /* Port-grid: single column on very small screens */
+  .port-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, clamp(200px, 60vw, 300px));
+  }
+  .port-main,
+  .port-r1, .port-r2,
+  .port-r3, .port-r4 {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
 }
 
 /* ── Mobile polish ───────────────────────────────────────── */
